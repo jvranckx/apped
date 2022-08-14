@@ -1,8 +1,8 @@
 {
+  "homepage": "http://vranckxjaimie.github.io/apped",
   "name": "apped",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://vranckxjaimie.github.io",
   "dependencies": {
     "@ant-design/colors": "^6.0.0",
     "@emotion/react": "^11.10.0",
