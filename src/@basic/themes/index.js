@@ -20,7 +20,7 @@ export default function ThemeCustomization({ children }) {
     );
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const themeTypography = Typography(`'Public Sans', sans-serif`);
+    const themeTypography = Typography(config.fontFamily);
     const themeCustomShadows = useMemo(() => CustomShadows(theme), [theme]);
 
     const themeOptions = useMemo(
