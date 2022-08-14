@@ -23,10 +23,10 @@ export default function Router() {
             },
             {
                 path: '/',
-                element: <MinimalLayout />,
+                element: <MinimalLayout ></MinimalLayout>,
                 children: [
-                    // { path: '/', element: <Navigate to="/dashboard/home" /> },
-                    { path: 'signin', element: <SignIn></SignIn> },
+                    { path: '/', element: <SignIn></SignIn> },
+                    // { path: 'signin', element: <SignIn></SignIn> },
                     // { path: 'signup', element: <SignUp></SignUp> },
                     // { path: 'password', element: <Password></Password> },
 
