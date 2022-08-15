@@ -23,7 +23,7 @@ export default function Router() {
                 // ],
             },
             {
-                path: '/',
+                path: '/apped',
                 element: <MinimalLayout ></MinimalLayout>,
                 children: [
                     { path: '/', element: <SignIn></SignIn> },
