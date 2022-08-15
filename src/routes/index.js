@@ -8,6 +8,7 @@ import SignIn from "../pages/authentication/SignIn";
 
 
 export default function Router() {
+    //Test
     return (
         useRoutes([
             {
@@ -22,7 +23,7 @@ export default function Router() {
                 // ],
             },
             {
-                path: '/',
+                path: '/apped',
                 element: <MinimalLayout ></MinimalLayout>,
                 children: [
                     { path: '/', element: <SignIn></SignIn> },
