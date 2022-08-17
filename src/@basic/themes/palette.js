@@ -16,7 +16,7 @@ const Palette = (paletteOptions) => {
     const warningColor = paletteOptions.warning ? generate(paletteOptions.warning) : colors.gold
     const infoColor = paletteOptions.info ? generate(paletteOptions.info) : colors.cyan
     const successColor = paletteOptions.success ? generate(paletteOptions.success) : colors.green
-
+    console.log(greyColor)
     return createTheme({
         palette: {
             mode: paletteOptions.mode,
@@ -40,15 +40,15 @@ const Palette = (paletteOptions) => {
             },
             secondary: {
                 lighter: greyColor[0],
-                100: greyColor[0],
-                200: greyColor[1],
-                light: greyColor[2],
-                400: greyColor[3],
-                main: greyColor[4],
-                600: greyColor[5],
-                dark: greyColor[6],
-                800: greyColor[7],
-                darker: greyColor[8],
+                100: greyColor[1],
+                200: greyColor[2],
+                light: greyColor[3],
+                400: greyColor[4],
+                main: greyColor[5],
+                600: greyColor[6],
+                dark: greyColor[7],
+                800: greyColor[8],
+                darker: greyColor[9],
                 contrastText: greyColor[0]
             },
             error: {

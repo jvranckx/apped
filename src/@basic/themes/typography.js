@@ -1,6 +1,6 @@
 // ==============================|| DEFAULT THEME - TYPOGRAPHY  ||============================== //
 
-const Typography = (fontFamily) => ({
+const Typography = (fontFamily, theme) => ({
     htmlFontSize: 16,
     fontFamily,
     fontWeightLight: 300,
@@ -8,19 +8,23 @@ const Typography = (fontFamily) => ({
     fontWeightMedium: 500,
     fontWeightBold: 600,
     h1: {
-        fontWeight: 600,
+        fontWeight: 700,
         fontSize: '2.375rem',
-        lineHeight: 1.21
+        lineHeight: 1.21,
+        color: theme.palette.grey[700]
     },
     h2: {
-        fontWeight: 600,
+        fontWeight: 700,
         fontSize: '1.875rem',
-        lineHeight: 1.27
+        lineHeight: 1.27,
+        color: theme.palette.grey[700]
+
     },
     h3: {
-        fontWeight: 600,
+        fontWeight: 700,
         fontSize: '1.5rem',
-        lineHeight: 1.33
+        lineHeight: 1.33,
+        color: theme.palette.grey[700]
     },
     h4: {
         fontWeight: 600,
@@ -64,7 +68,9 @@ const Typography = (fontFamily) => ({
         lineHeight: 1.66
     },
     button: {
-        textTransform: 'capitalize'
+        textTransform: 'capitalize',
+        fontWeight: 600,
+
     }
 });
 

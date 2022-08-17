@@ -11,16 +11,20 @@ export default function Button(theme) {
         MuiButton: {
             defaultProps: {
                 disableElevation: true
+
             },
             styleOverrides: {
                 root: {
-                    fontWeight: 400
+                    borderRadius: 50,
+
                 },
                 contained: {
                     ...disabledStyle
                 },
                 outlined: {
-                    ...disabledStyle
+                    borderWidth: "1px",
+                    ...disabledStyle,
+                    borderColor: "#bdbdbd"
                 }
             }
         }

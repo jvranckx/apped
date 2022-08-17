@@ -2,7 +2,7 @@
 
 const config = {
     defaultPath: '/dashboard/default',
-    fontFamily: `'Ubuntu', sans-serif;`,
+    fontFamily: "'Nunito', sans-serif;",
     i18n: 'en',
     miniDrawer: false,
     container: true,
@@ -10,12 +10,12 @@ const config = {
     themeDirection: 'ltr',
     paletteOptions: {
         mode: 'light',
-        grey: "#333331",
-        primary: "#48B854",
+        grey: "#959db8",
+        primary: "#0FA959",
         secondary: null,
         info: null,
         succes: null,
-        error: "#b85448",
+        error: "#a90f12",
         success: null,
     }
 };

@@ -20,7 +20,7 @@ export default function ThemeCustomization({ children }) {
     );
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const themeTypography = Typography(config.fontFamily);
+    const themeTypography = Typography(config.fontFamily, theme);
     const themeCustomShadows = useMemo(() => CustomShadows(theme), [theme]);
 
     const themeOptions = useMemo(
@@ -35,6 +35,9 @@ export default function ThemeCustomization({ children }) {
                 }
             },
             direction: 'ltr',
+            shape: {
+                borderRadius: 8
+            },
             mixins: {
                 toolbar: {
                     minHeight: 60,
@@ -50,6 +53,7 @@ export default function ThemeCustomization({ children }) {
     );
 
     const themes = createTheme(themeOptions);
+    console.log(themes)
     themes.components = componentsOverride(themes);
 
     return (

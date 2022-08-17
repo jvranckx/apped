@@ -3,7 +3,10 @@ import {
     Outlet
 } from "react-router-dom";
 import MinimalLayout from "../@basic/components/layout/MinimalLayout";
+import Password from "../pages/authentication/Password";
 import SignIn from "../pages/authentication/SignIn";
+import SignUp from "../pages/authentication/SignUp";
+import Terms from "../pages/authentication/Terms";
 
 
 
@@ -27,8 +30,11 @@ export default function Router() {
                 element: <MinimalLayout ></MinimalLayout>,
                 children: [
                     { path: '/', element: <SignIn></SignIn> },
-                    // { path: 'signin', element: <SignIn></SignIn> },
-                    // { path: 'signup', element: <SignUp></SignUp> },
+                    { path: 'signin', element: <SignIn></SignIn> },
+                    { path: 'signup', element: <SignUp></SignUp> },
+                    { path: 'terms', element: <Terms></Terms> },
+                    { path: 'password', element: <Password></Password> },
+
                     // { path: 'password', element: <Password></Password> },
 
                     // { path: '404', element: <NotFound /> },
