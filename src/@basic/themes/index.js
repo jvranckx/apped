@@ -45,6 +45,21 @@ export default function ThemeCustomization({ children }) {
                     paddingBottom: 8
                 }
             },
+            transitions: {
+                duration: {
+                    shortest: 150,
+                    shorter: 200,
+                    short: 250,
+                    // most basic recommended timing
+                    standard: 600,
+                    // this is to be used in complex animations
+                    complex: 375,
+                    // recommended when something is entering screen
+                    enteringScreen: 600,
+                    // recommended when something is leaving screen
+                    leavingScreen: 195,
+                },
+            },
             palette: theme.palette,
             customShadows: themeCustomShadows,
             typography: themeTypography

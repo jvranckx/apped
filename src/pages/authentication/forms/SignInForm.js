@@ -137,7 +137,7 @@ const SignInForm = () => {
                                     }
                                     label={<Typography variant="h6">Keep me sign in</Typography>}
                                 />
-                                <Link variant="h6" component={RouterLink} to="/password" color="text.primary">
+                                <Link variant="h6" component={RouterLink} to="/auth/password" color="text.primary">
                                     Forgot Password?
                                 </Link>
                             </Stack>
@@ -149,7 +149,8 @@ const SignInForm = () => {
                         )}
                         <Grid item xs={12}>
                             <AnimateButton>
-                                <Button
+                                <button
+                                    component={<Button />}
                                     disabled={isSubmitting}
                                     fullWidth
                                     size="large"
@@ -157,7 +158,7 @@ const SignInForm = () => {
                                     variant="contained"
                                 >
                                     login
-                                </Button>
+                                </button>
                             </AnimateButton>
                         </Grid>
                         <Grid item xs={12}>

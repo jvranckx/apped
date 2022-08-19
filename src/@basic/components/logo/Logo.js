@@ -1,7 +1,7 @@
 import { Box, Typography, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
 
-const Logo = ({ size, short, animate = true, color, sx }) => {
+const Logo = ({ size, short, animate = true, color, secondaryColor, onAnimationEnd, sx }) => {
     const theme = useTheme()
     return (
         <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", ...sx }}>
@@ -37,9 +37,10 @@ const Logo = ({ size, short, animate = true, color, sx }) => {
                 <motion.path
 
                     strokeWidth="47"
-                    stroke={color ? color : theme.palette.primary.main}
+                    stroke={secondaryColor ? secondaryColor : theme.palette.primary.main}
                     strokeLinecap="butt"
                     strokeLinejoin="butt"
+                    onAnimationComplete={onAnimationEnd}
                     transition={animate ? {
                         delay: 2,
                         duration: 1,
@@ -73,7 +74,8 @@ const Logo = ({ size, short, animate = true, color, sx }) => {
                     opacity: 1,
                 }}
             >
-                <Typography color={"white"} sx={{ letterSpacing: "3px", lineHeight: "50%" }} fontSize={115} fontFamily={"'Luckiest Guy', cursive"}>PPED</Typography>
+                <Typography color={color ? color : "#FFF"}
+                    sx={{ letterSpacing: "3px", lineHeight: "50%" }} fontSize={115} fontFamily={"'Luckiest Guy', cursive"}>PPED</Typography>
             </motion.div>}
         </Box>
     )

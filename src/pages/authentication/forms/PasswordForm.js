@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 
 // material-ui
 import {
     Button,
-
     FormHelperText,
     Grid,
-
     InputLabel,
     OutlinedInput,
     Stack,
@@ -16,7 +13,6 @@ import {
 // third party
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // project import
 import AnimateButton from '../../../@basic/components/AnimateButton.js';
@@ -25,16 +21,6 @@ import AnimateButton from '../../../@basic/components/AnimateButton.js';
 // ============================|| FIREBASE - LOGIN ||============================ //
 
 const PasswordForm = () => {
-    const [checked, setChecked] = React.useState(false);
-
-    const [showPassword, setShowPassword] = React.useState(false);
-    const handleClickShowPassword = () => {
-        setShowPassword(!showPassword);
-    };
-
-    const handleMouseDownPassword = (event) => {
-        event.preventDefault();
-    };
 
     return (
         <>
@@ -103,14 +89,6 @@ const PasswordForm = () => {
                                     </Button>
                                 </AnimateButton>
                             </Grid>
-                            {/* <Grid item xs={12}>
-                                <Divider>
-                                    <Typography variant="caption"> Login with</Typography>
-                                </Divider>
-                            </Grid> */}
-                            {/* <Grid item xs={12}>
-                                <FirebaseSocial />
-                            </Grid> */}
                         </Grid>
                     </form>
                 )}

@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
-// material-ui
 import {
     Box,
     Button,
-    Divider,
     FormControl,
     FormHelperText,
     Grid,
@@ -17,20 +15,14 @@ import {
     Stack,
     Typography
 } from '@mui/material';
-
-// third party
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-
-// project import
 import AnimateButton from '../../../@basic/components/AnimateButton.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { strengthColor, strengthIndicator } from '../../../@basic/utils/password-strength';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 
-// assets
 
-// ============================|| FIREBASE - REGISTER ||============================ //
 
 const SignUpForm = () => {
     const [level, setLevel] = useState();
@@ -202,7 +194,7 @@ const SignUpForm = () => {
                             <Grid item xs={12}>
                                 <Typography variant="body2">
                                     By Signing up, you agree to our &nbsp;
-                                    <Link variant="subtitle2" component={RouterLink} to="/terms">
+                                    <Link variant="subtitle2" component={RouterLink} to="/auth/terms">
                                         Terms of Service
                                     </Link>
                                     &nbsp; and &nbsp;

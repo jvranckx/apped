@@ -10,8 +10,8 @@ const config = {
     themeDirection: 'ltr',
     paletteOptions: {
         mode: 'light',
-        grey: "#959db8",
-        primary: "#0FA959",
+        grey: "#293f4e",
+        primary: "#2fcc85",
         secondary: null,
         info: null,
         succes: null,

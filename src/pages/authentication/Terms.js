@@ -1,5 +1,4 @@
 import { Box, Button, Typography, useTheme } from "@mui/material"
-import Wrapper from "./Wrapper"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useNavigate } from "react-router-dom"
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
@@ -8,13 +7,13 @@ const Terms = () => {
     const theme = useTheme()
     const navigate = useNavigate()
     return (
-        <Wrapper>
+        <Box>
             <Box width="100%" sx={{ display: "flex", justifyContent: "end", marginBottom: 2 }}>
                 <Button
                     variant="outlined"
                     sx={{ color: theme.palette.grey[900] }}
                     startIcon={<FontAwesomeIcon fixedWidth size="6x" icon={faArrowLeft} />}
-                    onClick={() => navigate("/signin", { replace: true })}
+                    onClick={() => navigate("/auth/signin", { replace: true })}
                 >
                     Back
                 </Button>
@@ -165,7 +164,7 @@ const Terms = () => {
                 The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and(b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort, and for breach of statutory duty.
 
                 As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</Typography>
-        </Wrapper >)
+        </Box >)
 }
 
 export default Terms

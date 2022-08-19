@@ -1,17 +1,17 @@
 import {
     useRoutes,
-    Outlet
+    Navigate
 } from "react-router-dom";
 import MinimalLayout from "../@basic/components/layout/MinimalLayout";
 import Password from "../pages/authentication/Password";
 import SignIn from "../pages/authentication/SignIn";
 import SignUp from "../pages/authentication/SignUp";
 import Terms from "../pages/authentication/Terms";
+import Wrapper from "../pages/authentication/Wrapper";
 
 
 
 export default function Router() {
-    //Test
     return (
         useRoutes([
             {
@@ -29,11 +29,16 @@ export default function Router() {
                 path: '/',
                 element: <MinimalLayout ></MinimalLayout>,
                 children: [
-                    { path: '/', element: <SignIn></SignIn> },
-                    { path: 'signin', element: <SignIn></SignIn> },
-                    { path: 'signup', element: <SignUp></SignUp> },
-                    { path: 'terms', element: <Terms></Terms> },
-                    { path: 'password', element: <Password></Password> },
+                    { path: '/', element: <Navigate to={"/auth/signin"}></Navigate> },
+                    {
+                        path: 'auth', element: <Wrapper></Wrapper>, children: [
+                            { path: 'signin', element: <SignIn></SignIn> },
+                            { path: 'signup', element: <SignUp></SignUp> },
+                            { path: 'terms', element: <Terms></Terms> },
+                            { path: 'password', element: <Password></Password> }
+                        ]
+                    }
+                    ,
 
                     // { path: 'password', element: <Password></Password> },
 
