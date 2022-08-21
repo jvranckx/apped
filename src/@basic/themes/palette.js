@@ -16,7 +16,6 @@ const Palette = (paletteOptions) => {
     const warningColor = paletteOptions.warning ? generate(paletteOptions.warning) : colors.gold
     const infoColor = paletteOptions.info ? generate(paletteOptions.info) : colors.cyan
     const successColor = paletteOptions.success ? generate(paletteOptions.success) : colors.green
-    console.log(greyColor)
     return createTheme({
         palette: {
             mode: paletteOptions.mode,

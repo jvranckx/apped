@@ -68,7 +68,6 @@ export default function ThemeCustomization({ children }) {
     );
 
     const themes = createTheme(themeOptions);
-    console.log(themes)
     themes.components = componentsOverride(themes);
 
     return (
