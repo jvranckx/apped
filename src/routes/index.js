@@ -8,6 +8,7 @@ import SignIn from "../pages/authentication/SignIn";
 import SignUp from "../pages/authentication/SignUp";
 import Terms from "../pages/authentication/Terms";
 import Wrapper from "../pages/authentication/Wrapper";
+import LandingPage from "../pages/landing/LandingPage";
 
 
 
@@ -29,7 +30,7 @@ export default function Router() {
                 path: '/',
                 element: <MinimalLayout ></MinimalLayout>,
                 children: [
-                    { path: '/', element: <Navigate to={"/auth/signin"}></Navigate> },
+                    { path: '/', element: <LandingPage /> },
                     {
                         path: 'auth', element: <Wrapper></Wrapper>, children: [
                             { path: 'signin', element: <SignIn></SignIn> },
@@ -39,9 +40,7 @@ export default function Router() {
                         ]
                     }
                     ,
-
                     // { path: 'password', element: <Password></Password> },
-
                     // { path: '404', element: <NotFound /> },
                     // { path: '*', element: <Navigate to="/404" /> },
                 ],
