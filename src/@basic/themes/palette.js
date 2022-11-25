@@ -102,7 +102,8 @@ const Palette = (paletteOptions) => {
                 disabled: greyColor[3]
             },
             action: {
-                disabled: greyColor[2]
+                disabled: greyColor[2],
+                hover: primaryColor[1],
             },
             divider: greyColor[1],
             background: {

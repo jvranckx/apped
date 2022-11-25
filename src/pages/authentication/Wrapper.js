@@ -29,10 +29,8 @@ const Wrapper = () => {
                     <Logo color={theme.palette.grey[500]} size={100} onAnimationEnd={() => setAnimationEnd(true)} />
                     <Box sx={{ height: animationEnd ? "80vh" : "0px", transition: animationEnd ? "height 0.5s ease-out" : null }}>
                         <Zoom in={animationEnd}>
-                            <Box>
-                                <Card sx={{ maxHeight: "80vh", marginTop: 2, maxWidth: "80vw", overflowY: "auto", transition: "all 1s ease-out" }}>
-                                    <Outlet />
-                                </Card>
+                            <Box sx={{ maxHeight: "80vh", marginTop: 2, maxWidth: "80vw", overflowY: "auto", transition: "all 1s ease-out" }}>
+                                <Outlet />
                             </Box>
                         </Zoom>
                     </Box>

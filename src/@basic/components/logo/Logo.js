@@ -1,5 +1,5 @@
 import { Box, Typography, useTheme } from '@mui/material';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Logo = ({ size, short, animate = true, color, secondaryColor, onAnimationEnd, sx }) => {
     const theme = useTheme()
@@ -62,22 +62,29 @@ const Logo = ({ size, short, animate = true, color, secondaryColor, onAnimationE
                     d="M241.7,71l-94.5,137l-18.7,2.5l-86.3-68.3"
                 />
             </motion.svg >
-            {!short && <motion.div
-                transition={{
-                    duration: animate ? 2 : 0,
-                    ease: 'easeInOut',
-                }}
-                initial={{
-                    opacity: 0,
-                }}
-                animate={{
-                    opacity: 1,
-                }}
-            >
-                <Typography color={color ? color : "#FFF"}
-                    sx={{ letterSpacing: "3px", lineHeight: "50%" }} fontSize={115} fontFamily={"'Luckiest Guy', cursive"}>PPED</Typography>
-            </motion.div>}
-        </Box>
+            <AnimatePresence>
+                {!short && <motion.div
+                    transition={{
+                        duration: animate ? 0.5 : 0,
+                        ease: 'linear',
+                    }}
+                    initial={{
+                        opacity: 0,
+                        width: 0
+                    }}
+                    animate={{
+                        opacity: 1, width: 120
+                    }}
+                    exit={{
+                        opacity: 0, width: 0
+                    }}
+
+                >
+                    <Typography color={color ? color : "#FFF"}
+                        sx={{ letterSpacing: "3px", lineHeight: "0%" }} fontSize={size + 6} fontFamily={"'Luckiest Guy', cursive"}>PPED</Typography>
+                </motion.div>}
+            </AnimatePresence>
+        </Box >
     )
 }
 export default Logo
